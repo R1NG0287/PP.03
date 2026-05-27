@@ -13,7 +13,7 @@ Console.WriteLine("Учебные примеры для code review на C#");
 Console.WriteLine("====================================");
 Console.WriteLine();
 Console.WriteLine("Запуск без аргументов: показать 6 общих учебных модулей.");
-Console.WriteLine("Запуск с номером варианта: dotnet run -- 19");
+Console.WriteLine("Запуск с номером варианта: dotnet run -- 16");
 Console.WriteLine();
 
 RunDiscountCalculatorDemo();
