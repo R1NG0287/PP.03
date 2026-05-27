@@ -1,6 +1,10 @@
+// <copyright file="OrderProcessorFixed.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules;
 
-public record Order(int Quantity, decimal UnitPrice, bool HasDiscount);
+public record Order(int quantity, decimal unitPrice, bool hasDiscount);
 
 public class OrderProcessorFixed
 {
@@ -13,8 +17,8 @@ public class OrderProcessorFixed
     {
         Validate(order);
 
-        var itemsTotal = order.Quantity * order.UnitPrice;
-        var discountedTotal = ApplyDiscount(itemsTotal, order.HasDiscount);
+        var itemsTotal = order.quantity * order.unitPrice;
+        var discountedTotal = ApplyDiscount(itemsTotal, order.hasDiscount);
         var deliveryPrice = CalculateDeliveryPrice(discountedTotal);
 
         return discountedTotal + deliveryPrice;
@@ -22,11 +26,15 @@ public class OrderProcessorFixed
 
     private static void Validate(Order order)
     {
-        if (order.Quantity <= 0)
-            throw new ArgumentOutOfRangeException(nameof(order.Quantity), "Количество должно быть больше нуля.");
+        if (order.quantity <= 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(order.quantity), "Количество должно быть больше нуля.");
+        }
 
-        if (order.UnitPrice < 0)
-            throw new ArgumentOutOfRangeException(nameof(order.UnitPrice), "Цена не может быть отрицательной.");
+        if (order.unitPrice < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(order.unitPrice), "Цена не может быть отрицательной.");
+        }
     }
 
     private static decimal ApplyDiscount(decimal total, bool hasDiscount)

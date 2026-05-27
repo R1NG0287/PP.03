@@ -1,3 +1,7 @@
+// <copyright file="Variant06_CarRentalBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant06_Car
@@ -22,17 +26,17 @@ public class Variant06_RentalBad
 
         if (r.Insurance == true)
         {
-            total = total + r.Days * 500;
+            total = total + (r.Days * 500);
         }
 
         if (r.ChildSeat == true)
         {
-            total = total + r.Days * 200;
+            total = total + (r.Days * 200);
         }
 
         if (r.Days > 14)
         {
-            total = total - total * 0.1;
+            total = total - (total * 0.1);
         }
 
         return total;

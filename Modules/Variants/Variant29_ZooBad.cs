@@ -1,3 +1,7 @@
+// <copyright file="Variant29_ZooBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant29_Animal
@@ -16,19 +20,20 @@ public class Variant29_Feeding
 
 public class Variant29_ZooBad
 {
-    private List<Variant29_Animal> animals = new();
-    private List<Variant29_Feeding> schedule = new();
+    private List<Variant29_Animal> animals = new ();
+    private List<Variant29_Feeding> schedule = new ();
 
     public string AddAnimal(Variant29_Animal a)
     {
-        for (int i = 0; i < animals.Count; i++)
+        for (int i = 0; i < this.animals.Count; i++)
         {
-            if (animals[i].N == a.N)
+            if (this.animals[i].N == a.N)
             {
                 return "bad";
             }
         }
-        animals.Add(a);
+
+        this.animals.Add(a);
         return "ok";
     }
 
@@ -49,7 +54,7 @@ public class Variant29_ZooBad
             portion = 2;
         }
 
-        schedule.Add(new Variant29_Feeding { A = a, Time = time, Portion = portion });
+        this.schedule.Add(new Variant29_Feeding { A = a, Time = time, Portion = portion });
         Console.WriteLine("Fed " + a.N + " (" + a.Species + ") with " + portion + "kg");
         return "ok";
     }

@@ -1,3 +1,7 @@
+// <copyright file="Variant11_ClothingShopBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant11_Item
@@ -9,7 +13,7 @@ public class Variant11_Item
 
 public class Variant11_Cart
 {
-    public List<Variant11_Item> Items = new();
+    public List<Variant11_Item> Items = new ();
 }
 
 public class Variant11_ShopBad
@@ -20,20 +24,20 @@ public class Variant11_ShopBad
 
         for (int i = 0; i < c.Items.Count; i++)
         {
-            sum = sum + c.Items[i].P * c.Items[i].Q;
+            sum = sum + (c.Items[i].P * c.Items[i].Q);
         }
 
         if (type == "regular")
         {
-            sum = sum - sum * 0.05;
+            sum = sum - (sum * 0.05);
         }
         else if (type == "vip")
         {
-            sum = sum - sum * 0.15;
+            sum = sum - (sum * 0.15);
         }
         else if (type == "gold")
         {
-            sum = sum - sum * 0.2;
+            sum = sum - (sum * 0.2);
         }
 
         if (sum > 5000)

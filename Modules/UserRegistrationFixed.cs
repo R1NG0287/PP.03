@@ -1,8 +1,12 @@
+// <copyright file="UserRegistrationFixed.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 using System.Text.RegularExpressions;
 
 namespace ReviewSamples.Modules;
 
-public record RegistrationResult(bool IsSuccess, string Message);
+public record RegistrationResult(bool isSuccess, string message);
 
 public class UserRegistrationFixed
 {
@@ -12,13 +16,19 @@ public class UserRegistrationFixed
     public RegistrationResult Register(string login, string password, string email)
     {
         if (string.IsNullOrWhiteSpace(login) || login.Length < MinLoginLength)
+        {
             return new RegistrationResult(false, "Логин должен содержать минимум 3 символа.");
+        }
 
         if (string.IsNullOrWhiteSpace(password) || password.Length < MinPasswordLength)
+        {
             return new RegistrationResult(false, "Пароль должен содержать минимум 8 символов.");
+        }
 
         if (!IsValidEmail(email))
+        {
             return new RegistrationResult(false, "Email указан некорректно.");
+        }
 
         return new RegistrationResult(true, "Пользователь зарегистрирован.");
     }
@@ -26,7 +36,9 @@ public class UserRegistrationFixed
     private static bool IsValidEmail(string email)
     {
         if (string.IsNullOrWhiteSpace(email))
+        {
             return false;
+        }
 
         return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
     }

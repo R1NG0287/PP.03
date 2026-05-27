@@ -1,3 +1,7 @@
+// <copyright file="Variant02_PharmacyBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant02_Medicine
@@ -16,10 +20,12 @@ public class Variant02_PharmacyBad
         {
             return true;
         }
+
         if ((m.D - t).Days < 30)
         {
             return true;
         }
+
         return false;
     }
 

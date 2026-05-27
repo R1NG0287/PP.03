@@ -1,3 +1,7 @@
+// <copyright file="Variant04_AutoServiceBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant04_Service
@@ -9,7 +13,7 @@ public class Variant04_Service
 public class Variant04_OrderForm
 {
     public string Car;
-    public List<Variant04_Service> Items = new();
+    public List<Variant04_Service> Items = new ();
     public string Type;
 }
 
@@ -26,11 +30,11 @@ public class Variant04_ServiceCenterBad
 
         if (f.Type == "regular")
         {
-            total = total - total * 0.05;
+            total = total - (total * 0.05);
         }
         else if (f.Type == "vip")
         {
-            total = total - total * 0.15;
+            total = total - (total * 0.15);
         }
 
         if (total > 10000)

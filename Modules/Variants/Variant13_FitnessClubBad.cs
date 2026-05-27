@@ -1,3 +1,7 @@
+// <copyright file="Variant13_FitnessClubBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant13_Plan

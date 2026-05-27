@@ -1,3 +1,7 @@
+// <copyright file="Variant22_PolyclinicBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant22_Doctor
@@ -15,25 +19,26 @@ public class Variant22_Slot
 
 public class Variant22_ClinicBad
 {
-    private List<Variant22_Slot> slots = new();
+    private List<Variant22_Slot> slots = new ();
 
     public string Issue(Variant22_Doctor d, DateTime time, string patient)
     {
-        for (int i = 0; i < slots.Count; i++)
+        for (int i = 0; i < this.slots.Count; i++)
         {
-            if (slots[i].D.N == d.N && slots[i].Time == time)
+            if (this.slots[i].D.N == d.N && this.slots[i].Time == time)
             {
-                if (slots[i].Patient != null)
+                if (this.slots[i].Patient != null)
                 {
                     return "bad";
                 }
-                slots[i].Patient = patient;
+
+                this.slots[i].Patient = patient;
                 return "ok";
             }
         }
 
         var s = new Variant22_Slot { D = d, Time = time, Patient = patient };
-        slots.Add(s);
+        this.slots.Add(s);
         return "ok";
     }
 }

@@ -1,3 +1,7 @@
+// <copyright file="Variant30_TheaterBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant30_Performance

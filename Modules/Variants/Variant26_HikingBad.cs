@@ -1,3 +1,7 @@
+// <copyright file="Variant26_HikingBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant26_Gear
@@ -9,7 +13,7 @@ public class Variant26_Gear
 public class Variant26_Hiker
 {
     public string N;
-    public List<Variant26_Gear> Gear = new();
+    public List<Variant26_Gear> Gear = new ();
 }
 
 public class Variant26_HikingBad
@@ -38,6 +42,7 @@ public class Variant26_HikingBad
         {
             sum = sum + h.Gear[i].Weight;
         }
+
         return sum;
     }
 }

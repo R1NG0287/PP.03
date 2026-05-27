@@ -1,3 +1,7 @@
+// <copyright file="Variant28_ToolRentalBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant28_Tool
@@ -22,7 +26,7 @@ public class Variant28_RentalBad
 
         if (r.Days > 7)
         {
-            total = total - total * 0.1;
+            total = total - (total * 0.1);
         }
 
         if (r.Damaged == true)

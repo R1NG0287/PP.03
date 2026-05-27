@@ -1,3 +1,7 @@
+// <copyright file="DiscountCalculatorBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules;
 
 public class DiscountCalculatorBad

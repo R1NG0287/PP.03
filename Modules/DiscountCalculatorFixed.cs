@@ -1,10 +1,14 @@
+// <copyright file="DiscountCalculatorFixed.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules;
 
 public enum CustomerType
 {
     New,
     Regular,
-    Vip
+    Vip,
 }
 
 public class DiscountCalculatorFixed
@@ -15,13 +19,17 @@ public class DiscountCalculatorFixed
     public decimal Calculate(decimal amount, CustomerType customerType)
     {
         if (amount < 0)
+        {
             throw new ArgumentOutOfRangeException(nameof(amount), "Сумма покупки не может быть отрицательной.");
+        }
 
         var percent = GetDiscountPercent(customerType);
         var discount = amount * percent;
 
         if (amount > LargePurchaseLimit)
+        {
             discount += LargePurchaseDiscount;
+        }
 
         return Math.Max(0, amount - discount);
     }

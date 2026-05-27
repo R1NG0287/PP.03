@@ -1,3 +1,7 @@
+// <copyright file="Variant10_ParkingBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant10_ParkingTicket

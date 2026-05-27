@@ -1,3 +1,7 @@
+// <copyright file="Variant08_RestaurantBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant08_Dish
@@ -15,7 +19,7 @@ public class Variant08_OrderItem
 public class Variant08_Order
 {
     public int Table;
-    public List<Variant08_OrderItem> Items = new();
+    public List<Variant08_OrderItem> Items = new ();
 }
 
 public class Variant08_RestaurantBad
@@ -30,10 +34,10 @@ public class Variant08_RestaurantBad
         double sum = 0;
         for (int i = 0; i < o.Items.Count; i++)
         {
-            sum = sum + o.Items[i].D.P * o.Items[i].Q;
+            sum = sum + (o.Items[i].D.P * o.Items[i].Q);
         }
 
-        sum = sum + sum * 0.1;
+        sum = sum + (sum * 0.1);
 
         Console.WriteLine("Table " + o.Table + " total = " + sum);
         return sum;

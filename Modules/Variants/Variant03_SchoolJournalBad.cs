@@ -1,3 +1,7 @@
+// <copyright file="Variant03_SchoolJournalBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant03_Grade
@@ -9,7 +13,7 @@ public class Variant03_Grade
 public class Variant03_Student
 {
     public string N;
-    public List<Variant03_Grade> Gs = new();
+    public List<Variant03_Grade> Gs = new ();
 }
 
 public class Variant03_JournalBad

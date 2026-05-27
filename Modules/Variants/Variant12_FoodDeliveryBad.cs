@@ -1,3 +1,7 @@
+// <copyright file="Variant12_FoodDeliveryBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant12_DeliveryRequest
@@ -19,7 +23,7 @@ public class Variant12_DeliveryBad
 
         if (r.Km > 5)
         {
-            fee = fee + (r.Km - 5) * 30;
+            fee = fee + ((r.Km - 5) * 30);
         }
 
         if (r.OrderSum < 500)

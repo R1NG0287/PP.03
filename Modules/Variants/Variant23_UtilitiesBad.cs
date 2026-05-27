@@ -1,3 +1,7 @@
+// <copyright file="Variant23_UtilitiesBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant23_MeterReading
@@ -18,20 +22,20 @@ public class Variant23_BillingBad
 
         if (water.Type == "cold")
         {
-            total = total + w * 35;
+            total = total + (w * 35);
         }
         else if (water.Type == "hot")
         {
-            total = total + w * 180;
+            total = total + (w * 180);
         }
 
         if (electricity.Type == "day")
         {
-            total = total + e * 5.5;
+            total = total + (e * 5.5);
         }
         else if (electricity.Type == "night")
         {
-            total = total + e * 2.5;
+            total = total + (e * 2.5);
         }
 
         return total;

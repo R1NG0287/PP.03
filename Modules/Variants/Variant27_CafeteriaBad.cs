@@ -1,3 +1,7 @@
+// <copyright file="Variant27_CafeteriaBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant27_MealPlan
@@ -16,7 +20,7 @@ public class Variant27_Meal
 
 public class Variant27_CafeteriaBad
 {
-    private List<Variant27_Meal> meals = new();
+    private List<Variant27_Meal> meals = new ();
 
     public string Register(string student, string type, DateTime d)
     {
@@ -26,24 +30,34 @@ public class Variant27_CafeteriaBad
         }
 
         double price = 0;
-        if (type == "breakfast") price = 60;
-        else if (type == "lunch") price = 120;
-        else if (type == "dinner") price = 100;
+        if (type == "breakfast")
+        {
+            price = 60;
+        }
+        else if (type == "lunch")
+        {
+            price = 120;
+        }
+        else if (type == "dinner")
+        {
+            price = 100;
+        }
 
-        meals.Add(new Variant27_Meal { Student = student, Type = type, D = d, P = price });
+        this.meals.Add(new Variant27_Meal { Student = student, Type = type, D = d, P = price });
         return "ok";
     }
 
     public double Monthly(string student, int month)
     {
         double sum = 0;
-        for (int i = 0; i < meals.Count; i++)
+        for (int i = 0; i < this.meals.Count; i++)
         {
-            if (meals[i].Student == student && meals[i].D.Month == month)
+            if (this.meals[i].Student == student && this.meals[i].D.Month == month)
             {
-                sum = sum + meals[i].P;
+                sum = sum + this.meals[i].P;
             }
         }
+
         return sum;
     }
 }

@@ -1,3 +1,7 @@
+// <copyright file="Variant18_AtmBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant18_Account
@@ -41,6 +45,7 @@ public class Variant18_AtmBad
         {
             return -1;
         }
+
         return a.Balance;
     }
 }

@@ -1,3 +1,7 @@
+// <copyright file="OrderProcessorBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules;
 
 public class OrderProcessorBad
@@ -8,7 +12,7 @@ public class OrderProcessorBad
 
         if (d == true)
         {
-            total = total - total * 0.1;
+            total = total - (total * 0.1);
         }
 
         if (total > 1000)

@@ -1,3 +1,7 @@
+// <copyright file="Variant25_FuelStationBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant25_Fuel

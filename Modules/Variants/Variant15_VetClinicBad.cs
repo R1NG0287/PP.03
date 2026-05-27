@@ -1,3 +1,7 @@
+// <copyright file="Variant15_VetClinicBad.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace ReviewSamples.Modules.Variants;
 
 public class Variant15_Animal
@@ -18,16 +22,16 @@ public class Variant15_Visit
 
 public class Variant15_VetBad
 {
-    private List<Variant15_Visit> visits = new();
+    private List<Variant15_Visit> visits = new ();
 
     public string Register(Variant15_Visit v)
     {
-        if (v.Diag == "")
+        if (v.Diag == string.Empty)
         {
             return "bad";
         }
 
-        visits.Add(v);
+        this.visits.Add(v);
         Console.WriteLine("Registered visit for " + v.A.N + ", diag = " + v.Diag + ", price = " + v.P);
         return "ok";
     }
